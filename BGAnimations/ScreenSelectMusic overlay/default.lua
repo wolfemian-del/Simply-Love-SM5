@@ -87,6 +87,9 @@ local af = Def.ActorFrame{
 	LoadActor("./Leaderboard.lua"),
 
 	LoadActor("./SongSearch/default.lua"),
+
+	-- Keyboard shortcut (F) that opens the song search; see the file for details.
+	LoadActor("./SongSearch/ShortcutHandler.lua"),
 }
 
 return af
