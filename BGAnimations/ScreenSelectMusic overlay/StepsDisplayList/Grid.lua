@@ -31,7 +31,7 @@ local t = Def.ActorFrame{
 					if StepsToDisplay[i] then
 						-- if this particular song has a stepchart for this row, update the Meter
 						-- and BlockRow coloring appropriately
-						local meter = StepsToDisplay[i]:GetMeter()
+						local meter = DisplayMeter.Text(StepsToDisplay[i], true)
 						local difficulty = StepsToDisplay[i]:GetDifficulty()
 						self:GetChild("Grid"):GetChild("Meter_"..i):playcommand("Set",  {Meter=meter, Difficulty=difficulty})
 					else

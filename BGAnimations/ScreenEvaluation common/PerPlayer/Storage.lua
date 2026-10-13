@@ -60,7 +60,7 @@ return Def.Actor{
 		else
 			storage.steps      = GAMESTATE:GetCurrentSteps(player)
 			storage.difficulty = pss:GetPlayedSteps()[1]:GetDifficulty()
-			storage.meter      = pss:GetPlayedSteps()[1]:GetMeter()
+			storage.meter      = DisplayMeter.Number(pss:GetPlayedSteps()[1])
 			storage.stepartist = pss:GetPlayedSteps()[1]:GetAuthorCredit()
 		end
 

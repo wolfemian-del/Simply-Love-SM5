@@ -580,7 +580,10 @@ for player in ivalues(PlayerNumber) do
 
 			local SongOrCourse, StepsOrTrail = GetSongAndSteps(player)
 			if not SongOrCourse then self:settext("") return end
-			local meter = StepsOrTrail and StepsOrTrail:GetMeter() or "?"
+			local meter = "?"
+			if StepsOrTrail then
+				meter = GAMESTATE:IsCourseMode() and StepsOrTrail:GetMeter() or DisplayMeter.Text(StepsOrTrail)
+			end
 
 			self:settext( meter )
 		end

@@ -85,7 +85,7 @@ return {
 				for steps in ivalues(allSteps) do
 					-- Don't consider edits.
 					if steps:GetDifficulty() ~= "Difficulty_Edit" then
-						if steps:GetMeter() == difficulty then
+						if DisplayMeter.Matches(steps, difficulty) then
 							return true
 						end
 					end

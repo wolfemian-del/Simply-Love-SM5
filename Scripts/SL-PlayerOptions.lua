@@ -362,9 +362,9 @@ local Overrides = {
 					for steps in ivalues( SongUtil.GetPlayableSteps(song) ) do
 						local choice
 						if steps:IsAnEdit() then
-							choice = ("%s\n%s %i"):format(steps:GetStepsType():gsub("%w+_%w+_", ""):lower(), steps:GetDescription(), steps:GetMeter())
+							choice = ("%s\n%s %s"):format(steps:GetStepsType():gsub("%w+_%w+_", ""):lower(), steps:GetDescription(), DisplayMeter.Text(steps))
 						else
-							choice = ("%s\n%s %i"):format(steps:GetStepsType():gsub("%w+_%w+_", ""):lower(), THEME:GetString("Difficulty", ToEnumShortString(steps:GetDifficulty())), steps:GetMeter())
+							choice = ("%s\n%s %s"):format(steps:GetStepsType():gsub("%w+_%w+_", ""):lower(), THEME:GetString("Difficulty", ToEnumShortString(steps:GetDifficulty())), DisplayMeter.Text(steps))
 						end
 						table.insert(choices, choice)
 					end
