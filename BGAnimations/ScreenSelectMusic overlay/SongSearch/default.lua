@@ -157,7 +157,7 @@ local songDetails = {
 		for difficulty in ivalues(difficulties) do
 			local steps = song:GetOneSteps(stepsType, difficulty)
 			if steps then
-				outstring = outstring .. steps:GetMeter() .. "   "
+				outstring = outstring .. DisplayMeter.Text(steps) .. "   "
 			end
 		end
 		return outstring

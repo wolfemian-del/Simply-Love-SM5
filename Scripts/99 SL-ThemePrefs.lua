@@ -95,6 +95,17 @@ SL_CustomPrefs.Get = function()
 			},
 			Values = { "Series", "Group", "Title", "Meter", "Popularity", "Recent"}
 		},
+		DifficultyDisplay =
+		{
+			Default = "Official",
+			Choices = {
+				THEME:GetString("ThemePrefs","DifficultyOfficial"),
+				THEME:GetString("ThemePrefs","DifficultyModeled"),
+				THEME:GetString("ThemePrefs","DifficultyBoth"),
+				THEME:GetString("ThemePrefs","DifficultyPerPack"),
+			},
+			Values = { "Official", "Modeled", "Both", "PerPack" }
+		},
 		PreferredStyle =
 		{
 			Default = "none",

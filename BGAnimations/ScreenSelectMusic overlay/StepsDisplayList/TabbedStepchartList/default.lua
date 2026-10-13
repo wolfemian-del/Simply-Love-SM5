@@ -96,7 +96,7 @@ for i=0,num_tabs-1 do
       RedrawCommand=function(self, StepsToDisplay)
          local stepchart = StepsToDisplay[i+1]
          if stepchart then
-            self:settext(stepchart:GetMeter())
+            self:settext(DisplayMeter.Text(stepchart, true))
             self:diffusealpha(1)
             if stepchart == GAMESTATE:GetCurrentSteps(player) then
                self:diffusealpha(1)

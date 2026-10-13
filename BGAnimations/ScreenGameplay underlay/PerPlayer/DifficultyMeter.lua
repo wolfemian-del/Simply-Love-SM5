@@ -34,7 +34,7 @@ return Def.ActorFrame{
 		CurrentSongChangedMessageCommand=function(self) self:queuecommand("Begin") end,
 		BeginCommand=function(self)
 			local steps = GAMESTATE:GetCurrentSteps(player)
-			local meter = steps:GetMeter()
+			local meter = steps and DisplayMeter.Text(steps, true)
 
 			if meter then
 				self:settext(meter)

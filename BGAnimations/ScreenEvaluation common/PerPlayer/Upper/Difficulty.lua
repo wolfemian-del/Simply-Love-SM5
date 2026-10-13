@@ -61,7 +61,7 @@ return Def.ActorFrame{
 				if trail then meter = trail:GetMeter() end
 			else
 				local steps = GAMESTATE:GetCurrentSteps(player)
-				if steps then meter = steps:GetMeter() end
+				if steps then meter = DisplayMeter.Text(steps, true) end
 			end
 
 			if meter then self:settext(meter) end
